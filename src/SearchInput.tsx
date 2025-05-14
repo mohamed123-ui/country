@@ -75,8 +75,8 @@ export default function SearchInput() {
   }
 
   return (
-    <div className='py-24'>
-      <div className='w-[60%] m-auto py-9 bg-white rounded-xl'>
+    <div className=' py-3 px-4 '>
+      <div className=' w-[100%] md:w-[60%] m-auto  py-9 bg-white rounded-xl px-3'>
         <h1 className="text-black text-center font-bold  text-2xl mb-1.5">Search About  your country</h1>
         <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto">
           <label htmlFor="default-search" className="sr-only">Search</label>
@@ -112,7 +112,7 @@ export default function SearchInput() {
           )}
 
           {error && <p className="text-red-500">{error}</p>}
-          {!error && countries.length === 0 && !blockedCountry && <h2>No countries found</h2>}
+          {!error && countries.length === 0 && !blockedCountry && <h2 className="text-center">No countries found</h2>}
 
           {countries.map((country) => {
             const timezone = country.timezones?.[0] || "UTC+00:00";
